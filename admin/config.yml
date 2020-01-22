@@ -13,4 +13,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Author", name: "author", widget: "string", required: false}
-      - {label: "Description", name: "description", widget: "string"}
+      - {label: "CoAuthor", name: "coauthor", widget: "string"}
+			- {label: "Description", name: "description", widget: "string"}
