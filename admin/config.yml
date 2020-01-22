@@ -14,4 +14,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Categories", name: "categories", widget: "string"}
       - {label: "Author", name: "author", widget: "string", required: false}
+			- {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
       - {label: "Description", name: "description"}
