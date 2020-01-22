@@ -16,3 +16,17 @@ collections:
       - {label: "CoAuthor", name: "coauthor", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
       - {label: "Description (max 170 characteres)", name: "description", widget: "string"}
+  - name: "imoveis"
+    label: "Imoveis"
+    folder: "_imoveis"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {label: "Author", name: "author", widget: "string", required: false}
+      - {label: "CoAuthor", name: "coauthor", widget: "string", required: false}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
+      - {label: "Description (max 170 characteres)", name: "description", widget: "string"}
+			
