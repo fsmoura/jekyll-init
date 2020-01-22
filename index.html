@@ -1,0 +1,46 @@
+---
+layout: default
+title: Top Cursos
+---
+
+{% include main-hero.html %}
+
+<section class="section">
+	<div class="container">
+		<ul>
+			{% for post in paginator.posts %}
+				<li>
+					<a href="{{ post.url | prepend: site.baseurl }}">
+						<h2 class="title">{{ post.title }}</h2>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+{% include pagination.html %}
+<section class="section has-background-grey-darker">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-4">
+				<h3 class="title is-4 has-text-white">Não encontrou o que procura? Faça uma pesquisa!</h3>
+			</div>
+			<div class="column is-5">
+				<form action="{{ site.baseurl }}/busca/" method="GET">
+					<div class="field has-addons">
+						<div class="control has-icons-left is-expanded">
+							<input type="search" name="s" class="input search-input is-medium" placeholder="Ex: Post" autocomplete="off" required>
+							<span class="icon is-small is-left">
+				  			<i class="fas fa-search"></i>
+							</span>
+						</div>
+						<div class="control">
+							<button class="button is-link is-medium">buscar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+

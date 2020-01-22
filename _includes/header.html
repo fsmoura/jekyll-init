@@ -1,0 +1,71 @@
+{% assign donate = "Atenção!!!" %}
+{% capture donateEl %}
+<a href="#" target="_blank">
+	<span class="tag is-danger is-uppercase cs-donate">
+		{{ donate }}
+	</span>
+</a>
+{% endcapture %}
+
+<nav class="navbar has-shadow cs-navbar" role="navigation" aria-label="main navigation">
+	<div class="container">
+		<div class="navbar-brand">
+
+			<a class="navbar-item is-size-5 has-text-weight-bold" href="{{ site.url }}">
+				<span class="icon is-medium">
+					<i class="fas fa-code fa-xs"></i>
+				</span>
+				<span class="cs-main-title"></span>
+			</a>
+
+			<div class="navbar-item is-hidden-desktop">
+				{{ donateEl }}
+			</div>
+
+			<a role="button" class="navbar-burger" id="cs-burger" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div class="navbar-menu">
+
+			<!-- Search	 -->
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<form action="{{ site.baseurl }}/busca/" method="GET">
+						<div class="field has-addons">
+							<div class="control">
+								<input type="search" name="s" class="input search-input" placeholder="O que você procura?" autocomplete="off" required>
+							</div>
+							<div class="control">
+								<button class="button is-link">
+									<span class="icon">
+										<i class="fas fa-search"></i>
+									</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- End search -->
+
+			<!-- Menu -->
+			<div class="navbar-end cs-navbar-menu">
+				{% for link in site.links %}
+					<a href="{{ site.baseurl }}{{ link.url }}" class="navbar-item is-uppercase has-text-weight-bold">{{ link.title }}</a>
+				{% endfor %}
+
+				<a href="{{ site.url }}{{ site.baseurl }}/feed.xml" class="navbar-item is-uppercase has-text-weight-bold" title="Atom/RSS feed">Feed</a>
+
+				<div class="navbar-item is-hidden-touch">
+					{{ donateEl }}
+				</div>
+			</div>
+			<!-- End menu -->
+
+		</div>
+	</div>
+</nav>

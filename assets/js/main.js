@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector("#cs-burger"),t=document.querySelector(".navbar-burger"),c=document.querySelector(".navbar-menu");e.addEventListener("click",function(){t.classList.toggle("is-active"),c.classList.toggle("is-active")})}();

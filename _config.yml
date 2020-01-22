@@ -1,0 +1,52 @@
+# Serving
+url: ""
+baseurl: ""
+
+# General options
+title: "Jekyll Init"
+description: "Breve descrição"
+author: "Fabio Moura"
+
+# Handling Reading
+exclude: [
+	"src/",
+	"node_modules/",
+	"package.json",
+	"gulpfile.js",
+	"README.md",
+	"Gemfile",
+	"Gemfile.lock",
+	"initpost.sh"
+]
+
+encoding: "utf-8"
+
+# Outputting
+permalink: /:title/
+
+links:
+- title: Home
+  url: /
+- title: Sobre
+  url: /sobre/
+- title: Tags
+  url: /tags/
+
+paginate_path: /page/:num
+paginate: 15
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  profile: false
+
+# Conversion
+markdown: kramdown
+
+# Plugins
+plugins: [
+	"jekyll-paginate",
+	"jekyll-feed",
+	"jekyll-sitemap",
+	"jekyll-admin"
+]

@@ -1,0 +1,29 @@
+<nav class="pagination is-centered is-medium" role="navigation" aria-label="pagination">
+	{% if paginator.previous_page %}
+		<a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-previous">
+			<span class="icon">
+				<i class="fas fa-arrow-left"></i>
+			</span>
+		</a>
+	{% else %}
+		<a href="#0" class="pagination-previous" disabled>
+			<span class="icon">
+				<i class="fas fa-arrow-left"></i>
+			</span>
+		</a>
+	{% endif %}
+	{% if paginator.next_page %}
+		<a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination-next">
+			<span class="icon">
+				<i class="fas fa-arrow-right"></i>
+			</span>
+		</a>
+	{% else %}
+		<a href="#0" class="pagination-next" disabled>
+			<span class="icon">
+				<i class="fas fa-arrow-right"></i>
+			</span>
+		</a>
+	{% endif %}
+	<div class="pagination-list is-size-6">Página: {{ paginator.page }} de {{ paginator.total_pages }}</div>
+</nav>
