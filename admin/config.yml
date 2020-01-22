@@ -14,4 +14,4 @@ collections:
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Author", name: "author", widget: "string", required: false}
       - {label: "CoAuthor", name: "coauthor", widget: "string"}
-			- {label: "Description", name: "description", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
