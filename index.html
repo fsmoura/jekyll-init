@@ -12,17 +12,7 @@ title: Jekyll Init
 			{% for post in paginator.posts %}
 				<li>
 					<a href="{{ post.url | prepend: site.baseurl }}">
-						<h2 class="title">{{ post.title }}</h2>
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-		<h2 class="title">Imoveis</h2>
-		<ul>
-			{% for imovel in site.imoveis %}
-				<li>
-					<a href="{{ imovel.url | prepend: site.baseurl }}">
-						<h2 class="title">{{ imovel.title }}</h2>
+						<h3 class="title">{{ post.title }}</h3>
 					</a>
 				</li>
 			{% endfor %}
