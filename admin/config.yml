@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
 media_folder: "assets/uploads"
-locale: "pt-br"
+locale: "pt"
 logo_url: http://construzem.com.br/img/logo-title.png
 collections:
   - name: "posts"
