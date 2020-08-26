@@ -47,6 +47,5 @@ markdown: kramdown
 plugins: [
 	"jekyll-paginate",
 	"jekyll-feed",
-	"jekyll-sitemap",
-	"jekyll-admin"
+	"jekyll-sitemap"
 ]
