@@ -3,7 +3,7 @@ backend:
   branch: master
 media_folder: "assets/uploads"
 locale: "pt"
-logo_url: http://construzem.com.br/img/logo-title.png
+logo_url: https://velozsolution.com/assets/img/logo-site.png
 collections:
   - name: "posts"
     label: "Posts"
@@ -15,9 +15,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Author", name: "author", widget: "string", required: false}
-      - {label: "CoAuthor", name: "coauthor", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
       - {label: "Description (max 170 characteres)", name: "description", widget: "string"}
+      - { label: 'Blog post content', name: 'body', widget: 'markdown' }
   - name: "imoveis"
     label: "Imoveis"
     folder: "_imoveis"
